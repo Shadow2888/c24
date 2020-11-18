@@ -19,25 +19,25 @@ function setup() {
 	ground=Bodies.rectangle(400,380,800,20,Options)
 	World.add(world,ground);
 	
-	var Options={isStatic: true}
-	b1=Bodies.rectangle(500,340,20,50,Options)
+	var Options1={isStatic: true}
+	b1=Bodies.rectangle(500,340,20,50,Options1)
 	World.add(world,b1);
 
-	var Options={isStatic: true}
-	b2=Bodies.rectangle(600,370,200,20,Options)
+	var Options2={isStatic: true}
+	b2=Bodies.rectangle(600,370,200,20,Options2)
 	World.add(world,b2);
 
-	var Options={isStatic: true}
-	b3=Bodies.rectangle(700,340,20,50,Options)
+	var Options3={isStatic: true}
+	b3=Bodies.rectangle(700,340,20,50,Options3)
 	World.add(world,b3);
 	//Create the Bodies Here.
-var Options={
+var Options4={
 	isStatic:false,
 	restitution:0.3,
 	friction:0.5,
 	density:1.2
 }
-p1=Bodies.circle(100,100,20,Options)
+p1=Bodies.circle(100,100,20,Options4)
 World.add(world,p1);
 	
 
@@ -74,7 +74,7 @@ function draw() {
 
 function keyPressed() {
 if (keyCode === UP_ARROW) {
-Matter.Body.applyForce(p1.body,p1.body.position,{x:85,y:-85});
+Matter.Body.applyForce(p1,p1.position,{x:55,y:-75});
 
        }
 
